@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Alpha Tapfuma — IT Portfolio</title>
+<meta name="description" content="Alpha Tapfuma - BSc Information Technology student portfolio. Showcasing projects, skills, and certifications in web development, cybersecurity, and data science."/>
+<meta property="og:title" content="Alpha Tapfuma — IT Portfolio"/>
+<meta property="og:description" content="BSc Information Technology student portfolio. Showcasing projects, skills, and certifications in web development, cybersecurity, and data science."/>
+<meta property="og:image" content="IMG_20230505_192032.jpg"/>
+<meta property="og:type" content="website"/>
+<link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+<link rel="preload" as="image" href="IMG_20230505_192032.jpg"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- CURSOR -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<div class="grain"></div>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">AT</div>
+  <div class="hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+  <ul id="nav-menu">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#features">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+
+  <!-- Floating rings -->
+  <div class="ring-decoration" style="width:500px;height:500px;right:-150px;top:-100px;animation-duration:40s;"></div>
+  <div class="ring-decoration" style="width:300px;height:300px;right:100px;bottom:50px;animation-duration:60s;animation-direction:reverse;"></div>
+
+  <div class="hero-content">
+    <div class="hero-badge"><span></span>Available for opportunities · 2027 Graduate</div>
+    <h1 class="hero-name">Alpha<br/><em>Tapfuma</em></h1>
+    <p class="hero-tagline">BSc Information Technology student crafting efficient, secure, and data-driven solutions — where code meets curiosity.</p>
+    <div class="hero-cta">
+      <a href="#projects" class="btn-gold">View My Work</a>
+      <a href="#contact" class="btn-outline">Get In Touch</a>
+    </div>
+  </div>
+
+  <!-- Photo + Stats -->
+  <div class="hero-right">
+    <div class="photo-frame">
+      <img src="IMG_20230505_192032.jpg" alt="Alpha Tapfuma"/>
+    </div>
+    <div class="stat-pills">
+      <div class="stat-pill">
+        <div class="stat-num">5+</div>
+        <div class="stat-label">Languages<br/>Mastered</div>
+      </div>
+      <div class="stat-pill">
+        <div class="stat-num">30+</div>
+        <div class="stat-label">Projects<br/>Completed</div>
+      </div>
+      <div class="stat-pill">
+        <div class="stat-num">3</div>
+        <div class="stat-label">Certifications<br/>Earned</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-indicator">
+    <div class="scroll-line"></div>
+    <span class="scroll-text">Scroll to explore</span>
+  </div>
+</section>
+
+<!-- SKILLS / FEATURES -->
+<section id="features">
+  <div class="section-label reveal">Core Competencies</div>
+  <h2 class="section-title reveal reveal-delay-1">Built on a foundation of<br/><em class="font-display" style="font-style:italic;color:var(--gold)">deep expertise</em></h2>
+  <div class="divider reveal reveal-delay-2"></div>
+
+  <div class="bento">
+    <!-- Card 1 - Wide - Languages -->
+    <div class="bento-card reveal" style="grid-column: span 5;">
+      <div class="card-icon">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+          <rect width="36" height="36" rx="4" fill="rgba(201,168,76,0.08)"/>
+          <path d="M10 13L6 18L10 23M26 13L30 18L26 23M21 11L15 25" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="card-title">Languages & Frameworks</div>
+      <div class="card-body">Proficient across the full spectrum of modern programming — from systems-level C++ to data-powered Python and interactive JavaScript environments.</div>
+      <div class="tag-list">
+        <span class="tag">Python</span><span class="tag">C++</span><span class="tag">JavaScript</span>
+        <span class="tag">TypeScript</span><span class="tag">SQL</span><span class="tag">VB.NET</span>
+        <span class="tag">React</span><span class="tag">Vue.js</span><span class="tag">HTML/CSS</span>
+      </div>
+    </div>
+
+    <!-- Card 2 - Terminal -->
+    <div class="bento-card reveal reveal-delay-1" style="grid-column: span 7; padding: 0;">
+      <div class="terminal" style="height:100%;border:none;border-radius:4px;">
+        <div class="terminal-bar">
+          <div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div>
+          <span style="font-size:0.7rem;color:var(--muted);margin-left:0.5rem;letter-spacing:0.1em;">alpha@portfolio ~ /skills</span>
+        </div>
+        <div class="terminal-body">
+          <div><span class="cmd">$ </span><span class="comment"># Alpha's toolkit</span></div>
+          <div><span class="cmd">$ </span>import { skills } from './alpha'</div>
+          <div><span class="out">✓ Languages: Python, C++, JS, SQL loaded</span></div>
+          <div><span class="cmd">$ </span>alpha.run('data_analysis')</div>
+          <div><span class="out">→ Pandas, NumPy, Matplotlib, Scikit-learn</span></div>
+          <div><span class="cmd">$ </span>alpha.run('web_dev')</div>
+          <div><span class="out">→ React, Vue.js, HTML, CSS, jQuery</span></div>
+          <div><span class="cmd">$ </span>alpha.run('security')</div>
+          <div><span class="out">→ Threat intel, Pen testing, Risk assess</span></div>
+          <div><span class="cmd">$ </span><span class="terminal-cursor"></span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 - Data Science -->
+    <div class="bento-card reveal reveal-delay-2" style="grid-column: span 4;">
+      <div class="card-icon">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+          <rect width="36" height="36" rx="4" fill="rgba(201,168,76,0.08)"/>
+          <rect x="7" y="22" width="4" height="7" rx="1" fill="#C9A84C" opacity="0.4"/>
+          <rect x="13" y="17" width="4" height="12" rx="1" fill="#C9A84C" opacity="0.6"/>
+          <rect x="19" y="12" width="4" height="17" rx="1" fill="#C9A84C" opacity="0.8"/>
+          <rect x="25" y="7" width="4" height="22" rx="1" fill="#C9A84C"/>
+          <path d="M7 20L16 14L22 16L30 9" stroke="#E8C97A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="card-title">Data Science</div>
+      <div class="card-body">Transforming raw data into meaningful insights using industry-standard tools.</div>
+      <div style="margin-top:1.5rem;">
+        <div class="skill-bar">
+          <div class="skill-bar-label"><span>Pandas / NumPy</span><span>88%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-bar-label"><span>Matplotlib</span><span>82%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-width="82"></div></div>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-bar-label"><span>Scikit-learn</span><span>75%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-width="75"></div></div>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-bar-label"><span>BeautifulSoup</span><span>79%</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" data-width="79"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4 - Cybersecurity -->
+    <div class="bento-card reveal reveal-delay-3" style="grid-column: span 4; background: linear-gradient(135deg, #111113, #16141A);">
+      <div class="card-icon">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+          <rect width="36" height="36" rx="4" fill="rgba(201,168,76,0.08)"/>
+          <path d="M18 6L8 10V18C8 23.5 12.5 28.5 18 30C23.5 28.5 28 23.5 28 18V10L18 6Z" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M14 18L16.5 20.5L22 15" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="card-title">Cybersecurity</div>
+      <div class="card-body">Network architecture, IP subnetting, threat intelligence, incident response, and penetration testing principles.</div>
+      <div class="tag-list" style="margin-top:1.2rem;">
+        <span class="tag">Network Security</span>
+        <span class="tag">Pen Testing</span>
+        <span class="tag">Risk Assessment</span>
+        <span class="tag">AI Ethics</span>
+      </div>
+    </div>
+
+    <!-- Card 5 - Cloud -->
+    <div class="bento-card reveal reveal-delay-4" style="grid-column: span 4;">
+      <div class="card-icon">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+          <rect width="36" height="36" rx="4" fill="rgba(201,168,76,0.08)"/>
+          <path d="M10 24C7.8 24 6 22.2 6 20C6 18 7.5 16.3 9.4 16.1C9.2 15.6 9 14.8 9 14C9 11.2 11.2 9 14 9C16 9 17.7 10.1 18.6 11.7C19.1 11.3 19.8 11 20.5 11C22.4 11 24 12.6 24 14.5C24 14.7 24 14.8 23.9 15C26.2 15.4 28 17.4 28 20C28 22.2 26.2 24 24 24H10Z" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="card-title">Cloud & Architecture</div>
+      <div class="card-body">Academic grounding in cloud computing paradigms and computer architecture for scalable, efficient system design.</div>
+      <div style="margin-top:1.5rem;display:flex;gap:1rem;flex-wrap:wrap;">
+        <div style="text-align:center;">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--gold);">Cloud</div>
+          <div style="font-size:0.65rem;color:var(--text-dim);letter-spacing:0.1em;text-transform:uppercase;">Computing</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--gold);">DB</div>
+          <div style="font-size:0.65rem;color:var(--text-dim);letter-spacing:0.1em;text-transform:uppercase;">Systems</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--gold);">OOP</div>
+          <div style="font-size:0.65rem;color:var(--text-dim);letter-spacing:0.1em;text-transform:uppercase;">Design</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" style="background: var(--surface);">
+  <div class="section-label reveal">Work</div>
+  <h2 class="section-title reveal reveal-delay-1">Selected <em class="font-display" style="font-style:italic;color:var(--gold)">Projects</em></h2>
+  <div class="divider reveal reveal-delay-2"></div>
+  <p class="reveal reveal-delay-3" style="color:var(--text-dim);font-size:0.9rem;max-width:560px;line-height:1.8;margin-top:0.5rem;">A curated selection of work spanning systems programming, data science, web development, and productivity tooling.</p>
+
+  <div class="projects-grid" style="margin-top:3rem;">
+
+    <div class="project-card reveal">
+      <span class="project-lang">Python</span>
+      <div class="project-name">ATM Machine Simulation</div>
+      <div class="project-desc">Menu-driven application simulating real banking interactions — deposits, withdrawals, and balance tracking with clean state management.</div>
+      <a href="https://github.com/KingAlpha362" target="_blank" class="project-arrow">
+        View on GitHub
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 12L12 2M12 2H5M12 2V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </a>
+    </div>
+
+    <div class="project-card reveal reveal-delay-1">
+      <span class="project-lang">Python</span>
+      <div class="project-name">Inventory Management System</div>
+      <div class="project-desc">Stock management tool for tracking inventory items, quantities, and categories — built with clean OOP principles for extensibility.</div>
+      <a href="https://github.com/KingAlpha362" target="_blank" class="project-arrow">
+        View on GitHub
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 12L12 2M12 2H5M12 2V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </a>
+    </div>
+
+    <div class="project-card reveal reveal-delay-2">
+      <span class="project-lang">Data Science</span>
+      <div class="project-name">Sales Data Analysis</div>
+      <div class="project-desc">Jupyter Notebook workflow extracting actionable insights from sales datasets using Pandas, Matplotlib, and statistical analysis techniques.</div>
+      <a href="https://github.com/KingAlpha362" target="_blank" class="project-arrow">
+        View on GitHub
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 12L12 2M12 2H5M12 2V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </a>
+    </div>
+
+    <div class="project-card reveal reveal-delay-3">
+      <span class="project-lang">React</span>
+      <div class="project-name">React Application</div>
+      <div class="project-desc">General-purpose React form application demonstrating component-based architecture, state management, and modern UI/UX patterns.</div>
+      <a href="https://github.com/KingAlpha362" target="_blank" class="project-arrow">
+        View on GitHub
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 12L12 2M12 2H5M12 2V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </a>
+    </div>
+
+    <div class="project-card reveal">
+      <span class="project-lang">TypeScript</span>
+      <div class="project-name">Penny 1.0</div>
+      <div class="project-desc">A TypeScript-based application exploring strongly-typed development patterns and modern ES module architecture.</div>
+      <a href="https://github.com/KingAlpha362" target="_blank" class="project-arrow">
+        View on GitHub
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 12L12 2M12 2H5M12 2V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </a>
+    </div>
+
+    <div class="project-card reveal reveal-delay-1">
+      <span class="project-lang">Python / Tkinter</span>
+      <div class="project-name">OOP GUI Application</div>
+      <div class="project-desc">Graphical desktop application demonstrating object-oriented design principles using Python's Tkinter framework for native UI rendering.</div>
+      <a href="https://github.com/KingAlpha362" target="_blank" class="project-arrow">
+        View on GitHub
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 12L12 2M12 2H5M12 2V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </a>
+    </div>
+
+    <div class="project-card reveal reveal-delay-2">
+      <span class="project-lang">C++</span>
+      <div class="project-name">Bank System</div>
+      <div class="project-desc">Structured C++ program simulating core banking operations — demonstrating systems-level programming and memory management fundamentals.</div>
+      <a href="https://github.com/KingAlpha362" target="_blank" class="project-arrow">
+        View on GitHub
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 12L12 2M12 2H5M12 2V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </a>
+    </div>
+
+    <div class="project-card reveal reveal-delay-3">
+      <span class="project-lang">JavaScript</span>
+      <div class="project-name">Web Projects Collection</div>
+      <div class="project-desc">A suite of responsive web interfaces — school pages, timetables, sign-up forms, and layout exercises built with HTML, CSS, JS, and jQuery.</div>
+      <a href="https://github.com/KingAlpha362" target="_blank" class="project-arrow">
+        View on GitHub
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 12L12 2M12 2H5M12 2V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-label reveal">Background</div>
+  <h2 class="section-title reveal reveal-delay-1">Driven by <em class="font-display" style="font-style:italic;color:var(--gold)">curiosity</em>,<br/>guided by precision</h2>
+  <div class="divider reveal reveal-delay-2"></div>
+
+  <div class="about-grid">
+    <div class="about-text reveal reveal-delay-2">
+      <div class="about-photo-inline">
+        <img src="1761846259768.jpg" alt="Alpha Tapfuma"/>
+      </div>
+      <p>I'm Alpha Tapfuma, a BSc Information Technology student with a passion for building things that are efficient, secure, and beautifully engineered. My academic journey has taken me through the full spectrum of modern computing — from the low-level logic of computer architecture to cloud-native systems and data-driven applications.</p>
+      <p>My technical foundation spans Python, C++, JavaScript, SQL, and MySQL, with hands-on experience in web development using React and Vue.js. I've applied this knowledge across real projects in data analysis, GUI development, and systems programming.</p>
+      <p>I'm particularly drawn to the intersection of cybersecurity and intelligent systems — building solutions that are not only functional, but resilient and responsible. Graduating in 2027, I'm actively seeking opportunities to apply and expand this expertise.</p>
+    </div>
+
+    <div class="reveal reveal-delay-3">
+      <div class="section-label" style="margin-bottom:1.5rem;">Certifications</div>
+      <div class="visual-cert-list">
+
+        <div class="visual-cert-item" onclick="openCert('cert-modal-1')">
+          <div class="visual-cert-preview">
+            <img src="Intro to Cyber.jpg" alt="Introduction to Cybersecurity Certificate"/>
+            <div class="visual-cert-overlay">
+              <span>Click to view</span>
+            </div>
+          </div>
+          <div class="visual-cert-info">
+            <div class="cert-num-small">01</div>
+            <div>
+              <div class="cert-title">Introduction to Cybersecurity</div>
+              <div class="cert-issuer">Cisco Networking Academy · Nov 2024</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="visual-cert-item" onclick="openCert('cert-modal-2')">
+          <div class="visual-cert-preview">
+            <img src="Artificial-Intelligence.png" alt="Artificial Intelligence Fundamentals Certificate"/>
+            <div class="visual-cert-overlay">
+              <span>Click to view</span>
+            </div>
+          </div>
+          <div class="visual-cert-info">
+            <div class="cert-num-small">02</div>
+            <div>
+              <div class="cert-title">Artificial Intelligence Fundamentals</div>
+              <div class="cert-issuer">IBM SkillsBuild · Oct 2024</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="visual-cert-item" onclick="openCert('cert-modal-3')">
+          <div class="visual-cert-preview">
+            <img src="Cyberfundementals.png" alt="Cybersecurity Fundamentals Certificate"/>
+            <div class="visual-cert-overlay">
+              <span>Click to view</span>
+            </div>
+          </div>
+          <div class="visual-cert-info">
+            <div class="cert-num-small">03</div>
+            <div>
+              <div class="cert-title">Cybersecurity Fundamentals</div>
+              <div class="cert-issuer">IBM SkillsBuild · Oct 2024</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- CERT MODALS -->
+    <div id="cert-modal-1" class="cert-modal" onclick="closeCert(this)">
+      <div class="cert-modal-inner" onclick="event.stopPropagation()">
+        <button class="cert-close" onclick="closeCert(document.getElementById('cert-modal-1'))">&#x2715;</button>
+        <img src="Intro to Cyber.jpg" alt="Introduction to Cybersecurity"/>
+      </div>
+    </div>
+    <div id="cert-modal-2" class="cert-modal" onclick="closeCert(this)">
+      <div class="cert-modal-inner" onclick="event.stopPropagation()">
+        <button class="cert-close" onclick="closeCert(document.getElementById('cert-modal-2'))">&#x2715;</button>
+        <img src="Artificial-Intelligence.png" alt="AI Fundamentals"/>
+      </div>
+    </div>
+    <div id="cert-modal-3" class="cert-modal" onclick="closeCert(this)">
+      <div class="cert-modal-inner" onclick="event.stopPropagation()">
+        <button class="cert-close" onclick="closeCert(document.getElementById('cert-modal-3'))">&#x2715;</button>
+        <img src="Cyberfundementals.png" alt="Cybersecurity Fundamentals"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-inner">
+    <div class="section-label reveal" style="text-align:center;">Let's Connect</div>
+    <h2 class="reveal reveal-delay-1" style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,4rem);font-weight:300;line-height:1.1;text-align:center;">Have a project in mind?<br/><em style="font-style:italic;color:var(--gold)">Let's build it.</em></h2>
+    <div class="reveal reveal-delay-2" style="display:flex;justify-content:center;margin-top:1rem;">
+      <div class="divider"></div>
+    </div>
+    <p class="reveal reveal-delay-2" style="text-align:center;color:var(--text-dim);font-size:0.9rem;margin-top:1rem;max-width:400px;margin-left:auto;margin-right:auto;line-height:1.8;">Open to internships, collaborations, and graduate opportunities. Let's create something meaningful together.</p>
+    <div class="reveal reveal-delay-3" style="text-align:center;">
+      <a href="mailto:alphatapfuma362a@gmail.com" class="contact-email">alphatapfuma362a@gmail.com</a>
+    </div>
+    <div class="social-row reveal reveal-delay-4">
+      <a href="https://www.linkedin.com/in/alphatapfuma/" target="_blank" class="social-link">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        LinkedIn
+      </a>
+      <a href="https://github.com/KingAlpha362" target="_blank" class="social-link">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        GitHub
+      </a>
+      <a href="tel:0695589481" class="social-link">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 2.5C3 2.2 3.2 2 3.5 2H5.4C5.7 2 5.9 2.2 5.9 2.4L6.8 5.2C6.9 5.5 6.7 5.8 6.5 5.9L5.2 6.5C5.8 7.9 7.1 9.2 8.5 9.8L9.1 8.5C9.2 8.3 9.5 8.1 9.8 8.2L12.6 9.1C12.8 9.2 13 9.4 13 9.7V11.5C13 12.3 12.3 13 11.5 13C6.8 13 3 9.2 3 4.5V2.5Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        069 558 9481
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 Alpha Tapfuma. All rights reserved.</p>
+  <div class="footer-logo">AT</div>
+  <p style="text-align:right;">BSc Information Technology<br/>Graduating 2027</p>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>
