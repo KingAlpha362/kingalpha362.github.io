@@ -1,4 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
+import profileImg from '../assets/1761846259768.jpg';
+import introCyberImg from '../assets/Intro to Cyber.jpg';
+import aiImg from '../assets/Artificial-Intelligence.png';
+import cyberFundImg from '../assets/Cyberfundementals.png';
 
 const About = () => {
   const containerRef = useRef(null);
@@ -35,9 +39,9 @@ const About = () => {
   }, [activeModal]);
 
   const certs = [
-    { id: 1, title: 'Introduction to Cybersecurity', issuer: 'Cisco Networking Academy · Nov 2024', img: '/Intro to Cyber.jpg' },
-    { id: 2, title: 'Artificial Intelligence Fundamentals', issuer: 'IBM SkillsBuild · Oct 2024', img: '/Artificial-Intelligence.png' },
-    { id: 3, title: 'Cybersecurity Fundamentals', issuer: 'IBM SkillsBuild · Oct 2024', img: '/Cyberfundementals.png' }
+    { id: 1, title: 'Introduction to Cybersecurity', issuer: 'Cisco Networking Academy · Nov 2024', img: introCyberImg },
+    { id: 2, title: 'Artificial Intelligence Fundamentals', issuer: 'IBM SkillsBuild · Oct 2024', img: aiImg },
+    { id: 3, title: 'Cybersecurity Fundamentals', issuer: 'IBM SkillsBuild · Oct 2024', img: cyberFundImg }
   ];
 
   return (
@@ -49,7 +53,7 @@ const About = () => {
       <div className="about-grid">
         <div className="about-text reveal reveal-delay-2">
           <div className="about-photo-inline">
-            <img src="/1761846259768.jpg" alt="Alpha Tapfuma"/>
+            <img src={profileImg} alt="Alpha Tapfuma"/>
           </div>
           <p>I'm Alpha Tapfuma, a BSc Information Technology student with a passion for building things that are efficient, secure, and beautifully engineered. My academic journey has taken me through the full spectrum of modern computing — from the low-level logic of computer architecture to cloud-native systems and data-driven applications.</p>
           <p>My technical foundation spans Python, C++, JavaScript, SQL, and MySQL, with hands-on experience in web development using React and Vue.js. I've applied this knowledge across real projects in data analysis, GUI development, and systems programming.</p>

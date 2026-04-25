@@ -1,6 +1,7 @@
 import TypingText from './TypingText';
 import StaggeredText from './StaggeredText';
 import Silk from './Silk';
+import heroImg from '../assets/IMG_20230505_192032.jpg';
 
 const Hero = () => {
   return (
@@ -50,7 +51,7 @@ const Hero = () => {
       {/* Photo + Stats */}
       <div className="hero-right animate-slide-left" style={{ animationDelay: '2s' }}>
         <div className="photo-frame animate-float" style={{ zIndex: 1, position: 'relative' }}>
-          <img src="/IMG_20230505_192032.jpg" alt="Alpha Tapfuma" />
+          <img src={heroImg} alt="Alpha Tapfuma" />
           <div className="photo-glow"></div>
         </div>
 
