@@ -14,6 +14,8 @@ import Projects from './components/Projects';
 import About from './components/About';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import CommandPalette from './components/CommandPalette';
+import DeveloperTerminal from './components/DeveloperTerminal';
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -91,6 +93,8 @@ function App() {
         <About />
         <Contact />
         <Footer />
+        <CommandPalette />
+        <DeveloperTerminal />
       </ClickSpark>
     </main>
   );

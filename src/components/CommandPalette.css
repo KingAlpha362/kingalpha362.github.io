@@ -1,0 +1,26 @@
+.cmdk-item {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.25rem;
+  border-radius: 8px;
+  color: var(--text);
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.cmdk-item[data-selected="true"],
+.cmdk-item:hover {
+  background: rgba(0, 229, 255, 0.1);
+  color: var(--gold);
+}
+
+.cmdk-dialog[data-state="open"] {
+  animation: dialogIn 0.2s ease-out;
+}
+
+@keyframes dialogIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}

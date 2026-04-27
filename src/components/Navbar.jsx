@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PillNav from './PillNav';
 import ThemeToggle from './ThemeToggle';
+import { Command } from 'lucide-react';
 
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState('#home');
@@ -49,7 +50,19 @@ const Navbar = () => {
       hoveredPillTextColor="#111113"
       pillTextColor="#E8E8EF"
       ease="power2.easeOut"
-      rightElement={<ThemeToggle />}
+      rightElement={
+        <div className="flex items-center gap-1 md:gap-2">
+          <button 
+            onClick={() => window.dispatchEvent(new Event('open-command-palette'))}
+            className="flex items-center justify-center p-2 rounded-full hover:bg-[rgba(0,229,255,0.1)] transition-colors text-zinc-400 hover:text-[var(--gold)]"
+            title="Command Palette (Cmd+K)"
+            style={{ cursor: 'none' }}
+          >
+            <Command size={18} />
+          </button>
+          <ThemeToggle />
+        </div>
+      }
     />
   );
 };
