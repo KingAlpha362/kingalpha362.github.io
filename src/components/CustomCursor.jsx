@@ -24,7 +24,7 @@ const CustomCursor = () => {
         cursor.style.height = '20px';
         ring.style.width = '60px';
         ring.style.height = '60px';
-        ring.style.borderColor = 'rgba(201,168,76,0.7)';
+        ring.style.borderColor = 'rgba(0,229,255,0.7)';
       }
     };
 
@@ -35,7 +35,7 @@ const CustomCursor = () => {
         cursor.style.height = '12px';
         ring.style.width = '40px';
         ring.style.height = '40px';
-        ring.style.borderColor = 'rgba(201,168,76,0.4)';
+        ring.style.borderColor = 'rgba(0,229,255,0.4)';
       }
     };
 

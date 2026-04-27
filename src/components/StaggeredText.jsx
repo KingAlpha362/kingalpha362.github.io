@@ -1,30 +1,43 @@
-import React, { useEffect, useState } from 'react';
+import React, { useRef } from 'react';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 
-const StaggeredText = ({ text, delay = 0, staggerDelay = 50, className = '' }) => {
-  const [isVisible, setIsVisible] = useState(false);
+const StaggeredText = ({ text, delay = 0, staggerDelay = 20, className = '' }) => {
+  const containerRef = useRef(null);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsVisible(true);
-    }, delay);
+  useGSAP(() => {
+    gsap.from('.staggered-letter', {
+      opacity: 0,
+      y: 15,
+      duration: 0.6,
+      stagger: staggerDelay / 1000,
+      delay: delay / 1000,
+      ease: 'power2.out',
+      scrollTrigger: {
+        trigger: containerRef.current,
+        start: 'top 95%',
+      }
+    });
+  }, { scope: containerRef });
 
-    return () => clearTimeout(timer);
-  }, [delay]);
-
-  const letters = text.split('');
+  const words = text.split(' ');
 
   return (
-    <span className={`staggered-text ${className}`}>
-      {letters.map((letter, index) => (
-        <span
-          key={index}
-          className="staggered-letter"
-          style={{
-            animationDelay: isVisible ? `${index * staggerDelay}ms` : '0ms',
-            animationPlayState: isVisible ? 'running' : 'paused'
-          }}
-        >
-          {letter === ' ' ? '\u00A0' : letter}
+    <span className={`staggered-text ${className}`} ref={containerRef} style={{ display: 'inline-block' }}>
+      {words.map((word, wIdx) => (
+        <span key={wIdx} className="staggered-word" style={{ display: 'inline-block', whiteSpace: 'nowrap' }}>
+          {word.split('').map((char, cIdx) => (
+            <span
+              key={cIdx}
+              className="staggered-letter"
+              style={{ display: 'inline-block', opacity: 1, willChange: 'opacity, transform' }}
+            >
+              {char}
+            </span>
+          ))}
+          {wIdx !== words.length - 1 && (
+            <span className="staggered-letter" style={{ display: 'inline-block' }}>&nbsp;</span>
+          )}
         </span>
       ))}
     </span>

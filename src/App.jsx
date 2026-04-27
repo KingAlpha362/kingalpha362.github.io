@@ -2,12 +2,13 @@ import { useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
-import CustomCursor from './components/CustomCursor';
+import TargetCursor from './components/TargetCursor';
+import ClickSpark from './components/ClickSpark';
 import LoadingScreen from './components/LoadingScreen';
 import ParticleBackground from './components/ParticleBackground';
 import Navbar from './components/Navbar';
-import ThemeToggle from './components/ThemeToggle';
 import Hero from './components/Hero';
+import TechStack from './components/TechStack';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import About from './components/About';
@@ -42,9 +43,9 @@ function App() {
         gsap.to(elements, {
           autoAlpha: 1,
           y: 0,
-          duration: 0.85,
-          stagger: 0.12,
-          ease: 'power2.out',
+          duration: 1.2,
+          stagger: 0.15,
+          ease: 'power3.out',
           overwrite: true
         });
       }
@@ -52,10 +53,10 @@ function App() {
 
     gsap.from('.bento-card', {
       autoAlpha: 0,
-      y: 28,
-      duration: 0.8,
-      stagger: 0.08,
-      ease: 'power2.out',
+      y: 40,
+      duration: 1.2,
+      stagger: 0.12,
+      ease: 'power3.out',
       scrollTrigger: {
         trigger: '#features .bento',
         start: 'top 82%'
@@ -64,10 +65,10 @@ function App() {
 
     gsap.from('.project-card', {
       autoAlpha: 0,
-      y: 28,
-      duration: 0.8,
-      stagger: 0.08,
-      ease: 'power2.out',
+      y: 40,
+      duration: 1.2,
+      stagger: 0.12,
+      ease: 'power3.out',
       scrollTrigger: {
         trigger: '#projects .projects-grid',
         start: 'top 82%'
@@ -77,20 +78,20 @@ function App() {
 
   return (
     <main ref={appRef}>
-      <LoadingScreen />
-      <CustomCursor />
-      <ParticleBackground />
-      <div className="grain"></div>
-      <Navbar />
-      <div style={{ position: 'fixed', top: '1rem', right: '1rem', zIndex: 110 }}>
-        <ThemeToggle />
-      </div>
-      <Hero />
-      <Skills />
-      <Projects />
-      <About />
-      <Contact />
-      <Footer />
+      <ClickSpark sparkColor="#00e5ff" sparkSize={12} sparkRadius={20} sparkCount={8} duration={400}>
+        <LoadingScreen />
+        <TargetCursor targetSelector="a, button, .bento-card, .project-card, .visual-cert-item, .tech-logo-wrapper" />
+        <ParticleBackground />
+        <div className="grain"></div>
+        <Navbar />
+        <Hero />
+        <Skills />
+        <TechStack />
+        <Projects />
+        <About />
+        <Contact />
+        <Footer />
+      </ClickSpark>
     </main>
   );
 }

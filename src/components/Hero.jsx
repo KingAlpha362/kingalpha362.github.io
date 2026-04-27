@@ -1,7 +1,7 @@
 import TypingText from './TypingText';
 import StaggeredText from './StaggeredText';
 import Silk from './Silk';
-import heroImg from '../assets/IMG_20230505_192032.jpg';
+import heroImg from '../assets/professional.jpg';
 
 const Hero = () => {
   return (
@@ -20,30 +20,29 @@ const Hero = () => {
       </div>
 
       <div className="hero-content">
-        <div className="hero-badge animate-fade-in">
-          <span></span>
-          <span>Available for opportunities · 2027 Graduate</span>
+        <div className="font-mono text-[var(--gold)] text-xs uppercase tracking-[0.3em] mb-4 opacity-80">
+          <TypingText text="> sudo run _" delay={500} speed={80} />
         </div>
         <h1 className="hero-name">
-          <TypingText text="Alpha" delay={1000} speed={150} />
+          <StaggeredText text="Engineering" delay={1200} staggerDelay={30} />
           <br/>
-          <em>
-            <TypingText text="Tapfuma" delay={2000} speed={150} />
+          <em className="text-[var(--gold)]">
+            <StaggeredText text="Scalable UI_." delay={1800} staggerDelay={30} />
           </em>
         </h1>
-        <p className="hero-tagline animate-slide-up" style={{ animationDelay: '3.5s' }}>
+        <p className="hero-tagline animate-slide-up" style={{ animationDelay: '3s' }}>
           <StaggeredText
-            text="BSc Information Technology student crafting efficient, secure, and data-driven solutions — where code meets curiosity."
-            delay={3500}
+            text="I am Alpha Tapfuma — a BSc Information Technology undergraduate architecting robust backends and high-performance frontend systems."
+            delay={3000}
             staggerDelay={20}
           />
         </p>
-        <div className="hero-cta animate-slide-up" style={{ animationDelay: '5s' }}>
+        <div className="hero-cta animate-slide-up" style={{ animationDelay: '4.5s' }}>
           <a href="#projects" className="btn-gold animate-pulse-glow">
-            <StaggeredText text="View My Work" delay={5500} staggerDelay={50} />
+            <StaggeredText text="< View Work />" delay={4500} staggerDelay={30} />
           </a>
-          <a href="#contact" className="btn-outline animate-pulse-glow" style={{ animationDelay: '6s' }}>
-            <StaggeredText text="Get In Touch" delay={6500} staggerDelay={50} />
+          <a href="#contact" className="btn-outline animate-pulse-glow" style={{ animationDelay: '5s' }}>
+            <StaggeredText text="initialize_contact()" delay={5000} staggerDelay={30} />
           </a>
         </div>
       </div>
@@ -51,22 +50,27 @@ const Hero = () => {
       {/* Photo + Stats */}
       <div className="hero-right animate-slide-left" style={{ animationDelay: '2s' }}>
         <div className="photo-frame animate-float" style={{ zIndex: 1, position: 'relative' }}>
-          <img src={heroImg} alt="Alpha Tapfuma" />
+          <img src={heroImg} alt="Alpha Tapfuma" className="relative z-10" />
           <div className="photo-glow"></div>
+          {/* Tech Data Ring */}
+          <svg className="absolute -inset-8 w-[calc(100%+4rem)] h-[calc(100%+4rem)] animate-spin-slow opacity-40 pointer-events-none" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="45" fill="none" stroke="var(--gold)" strokeWidth="0.5" strokeDasharray="4 8" />
+            <circle cx="50" cy="50" r="38" fill="none" stroke="var(--gold)" strokeWidth="0.2" />
+          </svg>
         </div>
 
         <div className="stat-pills animate-stagger-up" style={{ zIndex: 2, position: 'relative' }}>
           <div className="stat-pill animate-bounce-in" style={{ animationDelay: '3.5s' }}>
-            <div className="stat-num">5+</div>
-            <div className="stat-label">Languages<br/>Mastered</div>
+            <div className="stat-num font-mono text-xl">5<span className="text-[var(--gold)]">+</span></div>
+            <div className="stat-label uppercase tracking-widest text-[0.6rem] opacity-70">// Languages</div>
           </div>
           <div className="stat-pill animate-bounce-in" style={{ animationDelay: '4s' }}>
-            <div className="stat-num">30+</div>
-            <div className="stat-label">Projects<br/>Completed</div>
+            <div className="stat-num font-mono text-xl">30<span className="text-[var(--gold)]">+</span></div>
+            <div className="stat-label uppercase tracking-widest text-[0.6rem] opacity-70">// Repositories</div>
           </div>
           <div className="stat-pill animate-bounce-in" style={{ animationDelay: '4.5s' }}>
-            <div className="stat-num">3</div>
-            <div className="stat-label">Certifications<br/>Earned</div>
+            <div className="stat-num font-mono text-xl">3</div>
+            <div className="stat-label uppercase tracking-widest text-[0.6rem] opacity-70">// Certifications</div>
           </div>
         </div>
       </div>

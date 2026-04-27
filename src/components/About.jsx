@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import profileImg from '../assets/1761846259768.jpg';
+import profileImg from '../assets/peace.jpg';
 import introCyberImg from '../assets/Intro to Cyber.jpg';
 import aiImg from '../assets/Artificial-Intelligence.png';
 import cyberFundImg from '../assets/Cyberfundementals.png';

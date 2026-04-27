@@ -58,8 +58,8 @@ const Skills = () => {
         <div className="bento-card reveal" style={{ gridColumn: 'span 5' }}>
           <div className="card-icon">
             <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
-              <rect width="36" height="36" rx="4" fill="rgba(201,168,76,0.08)"/>
-              <path d="M10 13L6 18L10 23M26 13L30 18L26 23M21 11L15 25" stroke="#C9A84C" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              <rect width="36" height="36" rx="4" fill="rgba(0,229,255,0.08)"/>
+              <path d="M10 13L6 18L10 23M26 13L30 18L26 23M21 11L15 25" stroke="#00e5ff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </div>
           <div className="card-title">Languages & Frameworks</div>
@@ -97,12 +97,12 @@ const Skills = () => {
         <div className="bento-card reveal reveal-delay-2" style={{ gridColumn: 'span 4' }}>
           <div className="card-icon">
             <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
-              <rect width="36" height="36" rx="4" fill="rgba(201,168,76,0.08)"/>
-              <rect x="7" y="22" width="4" height="7" rx="1" fill="#C9A84C" opacity="0.4"/>
-              <rect x="13" y="17" width="4" height="12" rx="1" fill="#C9A84C" opacity="0.6"/>
-              <rect x="19" y="12" width="4" height="17" rx="1" fill="#C9A84C" opacity="0.8"/>
-              <rect x="25" y="7" width="4" height="22" rx="1" fill="#C9A84C"/>
-              <path d="M7 20L16 14L22 16L30 9" stroke="#E8C97A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              <rect width="36" height="36" rx="4" fill="rgba(0,229,255,0.08)"/>
+              <rect x="7" y="22" width="4" height="7" rx="1" fill="#00e5ff" opacity="0.4"/>
+              <rect x="13" y="17" width="4" height="12" rx="1" fill="#00e5ff" opacity="0.6"/>
+              <rect x="19" y="12" width="4" height="17" rx="1" fill="#00e5ff" opacity="0.8"/>
+              <rect x="25" y="7" width="4" height="22" rx="1" fill="#00e5ff"/>
+              <path d="M7 20L16 14L22 16L30 9" stroke="#7df5ff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </div>
           <div className="card-title">Data Science</div>
@@ -131,9 +131,9 @@ const Skills = () => {
         <div className="bento-card reveal reveal-delay-3" style={{ gridColumn: 'span 4', background: 'linear-gradient(135deg, #111113, #16141A)' }}>
           <div className="card-icon">
             <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
-              <rect width="36" height="36" rx="4" fill="rgba(201,168,76,0.08)"/>
-              <path d="M18 6L8 10V18C8 23.5 12.5 28.5 18 30C23.5 28.5 28 23.5 28 18V10L18 6Z" stroke="#C9A84C" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-              <path d="M14 18L16.5 20.5L22 15" stroke="#C9A84C" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              <rect width="36" height="36" rx="4" fill="rgba(0,229,255,0.08)"/>
+              <path d="M18 6L8 10V18C8 23.5 12.5 28.5 18 30C23.5 28.5 28 23.5 28 18V10L18 6Z" stroke="#00e5ff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M14 18L16.5 20.5L22 15" stroke="#00e5ff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </div>
           <div className="card-title">Cybersecurity</div>
@@ -150,8 +150,8 @@ const Skills = () => {
         <div className="bento-card reveal reveal-delay-4" style={{ gridColumn: 'span 4' }}>
           <div className="card-icon">
             <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
-              <rect width="36" height="36" rx="4" fill="rgba(201,168,76,0.08)"/>
-              <path d="M10 24C7.8 24 6 22.2 6 20C6 18 7.5 16.3 9.4 16.1C9.2 15.6 9 14.8 9 14C9 11.2 11.2 9 14 9C16 9 17.7 10.1 18.6 11.7C19.1 11.3 19.8 11 20.5 11C22.4 11 24 12.6 24 14.5C24 14.7 24 14.8 23.9 15C26.2 15.4 28 17.4 28 20C28 22.2 26.2 24 24 24H10Z" stroke="#C9A84C" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              <rect width="36" height="36" rx="4" fill="rgba(0,229,255,0.08)"/>
+              <path d="M10 24C7.8 24 6 22.2 6 20C6 18 7.5 16.3 9.4 16.1C9.2 15.6 9 14.8 9 14C9 11.2 11.2 9 14 9C16 9 17.7 10.1 18.6 11.7C19.1 11.3 19.8 11 20.5 11C22.4 11 24 12.6 24 14.5C24 14.7 24 14.8 23.9 15C26.2 15.4 28 17.4 28 20C28 22.2 26.2 24 24 24H10Z" stroke="#00e5ff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </div>
           <div className="card-title">Cloud & Architecture</div>

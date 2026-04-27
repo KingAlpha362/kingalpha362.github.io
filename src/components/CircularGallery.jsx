@@ -227,16 +227,18 @@ class Media {
     const x = this.plane.position.x;
     const H = this.viewport.width / 2;
 
-    if (this.bend === 0) {
+    const activeBend = this.screen.width < 768 ? 0.8 : this.bend; // Less curvature to prevent side-overlap
+
+    if (activeBend === 0) {
       this.plane.position.y = 0;
       this.plane.rotation.z = 0;
     } else {
-      const B_abs = Math.abs(this.bend);
+      const B_abs = Math.abs(activeBend);
       const R = (H * H + B_abs * B_abs) / (2 * B_abs);
       const effectiveX = Math.min(Math.abs(x), H);
 
       const arc = R - Math.sqrt(R * R - effectiveX * effectiveX);
-      if (this.bend > 0) {
+      if (activeBend > 0) {
         this.plane.position.y = -arc;
         this.plane.rotation.z = -Math.sign(x) * Math.asin(effectiveX / R);
       } else {
@@ -270,7 +272,9 @@ class Media {
         this.plane.program.uniforms.uViewportSizes.value = [this.viewport.width, this.viewport.height];
       }
     }
-    this.scale = this.screen.height / 1500;
+    const isMobile = this.screen.width < 768;
+    this.scale = isMobile ? (this.screen.width / 2000) : (this.screen.height / 1500);
+
     this.plane.scale.y = (this.viewport.height * (900 * this.scale)) / this.screen.height;
     this.plane.scale.x = (this.viewport.width * (700 * this.scale)) / this.screen.width;
     this.plane.program.uniforms.uPlaneSizes.value = [this.plane.scale.x, this.plane.scale.y];
@@ -376,17 +380,15 @@ class App {
   onTouchMove(e) {
     if (!this.isDown) return;
     const x = e.touches ? e.touches[0].clientX : e.clientX;
-    const distance = (this.start - x) * (this.scrollSpeed * 0.025);
+    const distance = (this.start - x) * (this.scrollSpeed * 0.05); // Increased touch sensitivity!
     this.scroll.target = this.scroll.position + distance;
   }
   onTouchUp() {
     this.isDown = false;
-    this.onCheck();
   }
   onWheel(e) {
     const delta = e.deltaY || e.wheelDelta || e.detail;
-    this.scroll.target += (delta > 0 ? this.scrollSpeed : -this.scrollSpeed) * 0.2;
-    this.onCheckDebounce();
+    this.scroll.target += (delta > 0 ? this.scrollSpeed : -this.scrollSpeed) * 1.5; // Increased scroll sensitivity!
   }
   onCheck() {
     if (!this.medias || !this.medias[0]) return;
@@ -413,6 +415,9 @@ class App {
     }
   }
   update() {
+    if (!this.isDown) {
+      this.scroll.target -= 0.025; // Gentle, elegant auto-rotation speed
+    }
     this.scroll.current = lerp(this.scroll.current, this.scroll.target, this.scroll.ease);
     const direction = this.scroll.current > this.scroll.last ? 'right' : 'left';
     if (this.medias) {

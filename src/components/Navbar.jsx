@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import PillNav from './PillNav';
+import ThemeToggle from './ThemeToggle';
 
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState('#home');
@@ -30,24 +31,25 @@ const Navbar = () => {
   }, []);
 
   const items = [
-    { label: 'Home', href: '#home' },
-    { label: 'Skills', href: '#features' },
-    { label: 'Projects', href: '#projects' },
-    { label: 'About', href: '#about' },
-    { label: 'Contact', href: '#contact' }
+    { label: '<Home />', href: '#home' },
+    { label: '<Skills />', href: '#features' },
+    { label: '<Projects />', href: '#projects' },
+    { label: '<About />', href: '#about' },
+    { label: '<Contact />', href: '#contact' }
   ];
 
   return (
     <PillNav
-      logo="/logo.svg"
+      logo="logo.svg"
       logoAlt="Alpha Tapfuma Logo"
       items={items}
       activeHref={activeSection}
-      baseColor="#C9A84C"
+      baseColor="#00e5ff"
       pillColor="rgba(255,255,255,0.06)"
       hoveredPillTextColor="#111113"
       pillTextColor="#E8E8EF"
       ease="power2.easeOut"
+      rightElement={<ThemeToggle />}
     />
   );
 };

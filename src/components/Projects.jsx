@@ -1,8 +1,19 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import CircularGallery from './CircularGallery';
+import { useTheme } from './ThemeProvider';
 
 const Projects = () => {
   const containerRef = useRef(null);
+  const [isMobile, setIsMobile] = useState(false);
+  const { theme } = useTheme();
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(max-width: 768px)');
+    setIsMobile(mediaQuery.matches);
+    const handler = (e) => setIsMobile(e.matches);
+    mediaQuery.addEventListener('change', handler);
+    return () => mediaQuery.removeEventListener('change', handler);
+  }, []);
   const projects = [
     {
       lang: 'Python',
@@ -119,29 +130,35 @@ const Projects = () => {
     const descStartY = dividerY + 62;
     const descLineHeight = 38;
 
+    const bg1 = theme === 'light' ? '#ffffff' : '#111113';
+    const bg2 = theme === 'light' ? '#f0f0f0' : '#18181C';
+    const strokeC = theme === 'light' ? '#e0e0e0' : '#2B2B31';
+    const textPri = theme === 'light' ? '#111111' : '#E8E8EF';
+    const textSec = theme === 'light' ? '#666666' : '#A4A4B2';
+
     const svg = `
       <svg xmlns="http://www.w3.org/2000/svg" width="${CARD_WIDTH}" height="${CARD_HEIGHT}" viewBox="0 0 ${CARD_WIDTH} ${CARD_HEIGHT}">
         <defs>
           <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stop-color="#111113"/>
-            <stop offset="100%" stop-color="#18181C"/>
+            <stop offset="0%" stop-color="${bg1}"/>
+            <stop offset="100%" stop-color="${bg2}"/>
           </linearGradient>
           <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0%" stop-color="#C9A84C"/>
-            <stop offset="100%" stop-color="#E8C97A"/>
+            <stop offset="0%" stop-color="#00e5ff"/>
+            <stop offset="100%" stop-color="#7df5ff"/>
           </linearGradient>
         </defs>
         <rect width="${CARD_WIDTH}" height="${CARD_HEIGHT}" fill="url(#bg)"/>
-        <rect x="32" y="32" width="${CARD_WIDTH - 64}" height="${CARD_HEIGHT - 64}" rx="22" fill="none" stroke="#2B2B31" stroke-width="2"/>
-        <text x="64" y="132" fill="#C9A84C" font-family="Arial, sans-serif" font-size="30" letter-spacing="3">${escapeXml(project.lang.toUpperCase())}</text>
-        <text x="64" y="${titleStartY}" fill="#E8E8EF" font-family="Arial, sans-serif" font-size="56" font-weight="700">
+        <rect x="32" y="32" width="${CARD_WIDTH - 64}" height="${CARD_HEIGHT - 64}" rx="22" fill="none" stroke="${strokeC}" stroke-width="2"/>
+        <text x="64" y="132" fill="#00e5ff" font-family="Geist, Inter, sans-serif" font-size="30" letter-spacing="3">${escapeXml(project.lang.toUpperCase())}</text>
+        <text x="64" y="${titleStartY}" fill="${textPri}" font-family="Geist, Inter, sans-serif" font-size="56" font-weight="700">
           ${renderTspans(titleLines, 64, titleStartY, titleLineHeight)}
         </text>
         <rect x="64" y="${dividerY}" width="230" height="4" rx="2" fill="url(#line)"/>
-        <text x="64" y="${descStartY}" fill="#A4A4B2" font-family="Arial, sans-serif" font-size="31">
+        <text x="64" y="${descStartY}" fill="${textSec}" font-family="Geist, Inter, sans-serif" font-size="31">
           ${renderTspans(descLines, 64, descStartY, descLineHeight)}
         </text>
-        <text x="64" y="790" fill="#C9A84C" font-family="Arial, sans-serif" font-size="27" letter-spacing="1.5">VIEW ON GITHUB</text>
+        <text x="64" y="790" fill="#00e5ff" font-family="Geist, Inter, sans-serif" font-size="27" letter-spacing="1.5">&lt; VIEW_ON_GITHUB /&gt;</text>
       </svg>
     `;
 
@@ -174,9 +191,19 @@ const Projects = () => {
         A curated selection of work spanning systems programming, data science, web development, and productivity tooling.
       </p>
 
-      <div className="reveal" style={{ height: '600px', position: 'relative', marginTop: '3rem' }}>
-        <CircularGallery items={galleryItems} bend={3} textColor="#ffffff" borderRadius={0.05} scrollEase={0.02} />
-      </div>
+      {!isMobile ? (
+        <div className="reveal" style={{ height: '600px', position: 'relative', marginTop: '3rem' }}>
+          <CircularGallery items={galleryItems} bend={3} textColor={theme === 'light' ? '#212529' : '#ffffff'} borderRadius={0.05} scrollEase={0.02} />
+        </div>
+      ) : (
+        <div className="reveal mobile-projects-slider" style={{ marginTop: '2rem' }}>
+          {galleryItems.map((item, i) => (
+             <div key={i} className="mobile-project-card">
+                <img src={item.image} alt={item.text} />
+             </div>
+          ))}
+        </div>
+      )}
     </section>
   );
 };

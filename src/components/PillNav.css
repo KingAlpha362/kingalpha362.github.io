@@ -229,6 +229,12 @@
   }
 }
 
+.pill-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .hamburger-line {
   width: 16px;
   height: 2px;
